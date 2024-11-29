@@ -1,0 +1,23 @@
+import Image from 'next/image';
+import styles from './product-page.module.scss'
+
+const DetailedProductPage = ({ product }: any) => {
+
+    return <div className={styles.product_container}>
+        <Image
+            src={product.product[0].images[0]}
+            alt={product.product[0].id}
+            width={300}
+            height={300}
+            style={{ objectFit: 'cover', aspectRatio: 1 }}
+            placeholder='blur'
+            blurDataURL={'/blur.webp'}
+        />
+        <p>{product.product[0].title}</p>
+        <p>{product.product[0].description}</p>
+        <p>{new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(product.product[0].price)}</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae exercitationem perspiciatis quisquam aut distinctio eligendi, omnis similique, odit saepe, autem tenetur rerum animi natus soluta harum eveniet ullam doloremque a earum reprehenderit vel doloribus facilis ipsum numquam. Accusamus, ad aliquid perspiciatis omnis tempora unde quasi quae deserunt laudantium cumque voluptatem at illum pariatur error dolor id cum doloremque, eligendi eum debitis hic suscipit nam dolores. Tempora quidem nihil, repellat dolorum labore at consectetur accusamus pariatur soluta quas consequatur nesciunt quam, tenetur fuga porro, ipsam sed quia error. Eveniet delectus praesentium, veritatis excepturi saepe provident, placeat tempora non consequatur ea esse itaque hic odio quaerat ratione quasi quo adipisci dignissimos laboriosam necessitatibus expedita nihil illum impedit. Mollitia quo quod ipsam nulla. Dignissimos, suscipit. Ipsam voluptatem, porro, earum id illo sequi dicta rem optio tenetur recusandae, veniam tempora officiis quod! Fugiat pariatur nemo officia in quas debitis, rem labore obcaecati earum ea nulla, dolore quia suscipit facilis vero nihil ad inventore eos nesciunt. Cum deserunt mollitia in ex impedit nam exercitationem, consequuntur soluta, consectetur molestias quod deleniti, animi perferendis minus sequi hic atque error minima temporibus. Sed ipsa quo, ab quas eos quibusdam architecto laudantium iste a aut quod accusamus, odit debitis error, nesciunt et minus cumque mollitia non neque fugiat est! Veritatis, aliquid sequi. Debitis, iste. Dolore ab, soluta itaque tenetur provident ipsam nostrum! Fugiat illo, ad odit fuga excepturi in, debitis rem vero at harum commodi nisi minus perferendis dolor quo quos nam labore eum, cupiditate repellendus nostrum quasi officiis facere. Natus et illo error suscipit amet, doloremque culpa laborum est dolorem tempora assumenda accusamus vitae tempore odit excepturi esse numquam cumque! Velit provident esse repellendus eius veniam vero voluptatem labore consequuntur soluta voluptate? Possimus vitae excepturi at totam! Aperiam, magni nihil. Soluta quasi similique reiciendis, qui placeat, excepturi consectetur id ipsam corporis esse error. Aliquid, nulla officiis excepturi quasi debitis fuga vel perspiciatis necessitatibus dolore minima omnis magnam exercitationem at eaque cupiditate, distinctio ex quisquam perferendis libero laudantium. Facilis praesentium a fuga, sequi pariatur molestias. Odit cupiditate repudiandae architecto, libero mollitia corrupti voluptatem voluptatum laboriosam quia aliquam animi culpa sequi placeat accusamus similique explicabo natus incidunt temporibus. Modi molestias magnam cum accusamus molestiae delectus aspernatur sint id sunt quas quam, similique quidem blanditiis maiores ab repellat cupiditate, adipisci eveniet, expedita nobis earum dolore atque tenetur veniam. Voluptatem quae earum adipisci magni aliquam animi voluptate repellat perferendis, eius harum eaque sapiente voluptas, atque laboriosam iure quidem? Quae, suscipit? Iusto, ut iste quidem, blanditiis labore dolorum laboriosam nihil ex omnis officiis, iure cupiditate sint. Officiis nihil ea hic temporibus minima perferendis aliquid eum ducimus eveniet sed ab quod rem eaque corrupti quia quidem quasi porro perspiciatis, facilis voluptatem sit. Et soluta repellendus cupiditate tempora quaerat praesentium numquam ab eveniet molestiae sint minima assumenda fugit, tenetur quibusdam quidem nisi sunt voluptas eligendi sequi quo eius ipsam? Tempore voluptatibus, quod omnis voluptate impedit, delectus illum obcaecati officiis tenetur provident velit quos doloribus dolore voluptatum consequuntur rerum et esse blanditiis ea iste. Dolores, adipisci!</p>
+    </div>
+}
+
+export default DetailedProductPage
