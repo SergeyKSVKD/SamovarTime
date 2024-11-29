@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Задание: Разработка проекта с использованием Next.js
 
-## Getting Started
+Описание:
 
-First, run the development server:
+Необходимо создать веб-приложение для отображения списка товаров, их деталей и поиска. В приложении должны быть реализованы следующие
+функциональности:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Главная страница:
+Показать список товаров (название, цена и краткое описание).
+Данные для товаров нужно загружать через серверный API (используя getServerSideProps или getStaticProps ).
+2. Страница товара:
+При клике на товар с главной страницы пользователь переходит на страницу с детальной информацией о товаре.
+На странице товара должна быть информация о товаре (полное описание, изображение, цена).
+URL страницы товара должен быть динамическим, например, /product/[id] .
+3. Поиск:
+На главной странице добавить строку поиска.
+При вводе текста в поле поиска — динамически отфильтровать список товаров по имени.
+Поиск должен работать на клиенте без перезагрузки страницы.
+4. API:
+Необходимо создать серверный API для получения списка товаров и деталей товара.
+Пример: /api/products — возвращает список товаров. /api/products/[id] — возвращает детали товара по его ID.
+5. Оптимизация производительности:
+Используйте механизмы кеширования, если это необходимо для улучшения производительности.
+Важно продемонстрировать использование таких фич, как Image Optimization, динамические импорты и т.д.
+6. UI/UX:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Простой и понятный интерфейс. Можно использовать Material-UI, TailwindCSS или любой другой фреймворк по выбору.
+Минимальный функционал для улучшения пользовательского опыта (например, загрузка при переключении страниц или поиске).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Требования:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Использование Next.js (версии 13 или выше).
+Использование React для рендеринга компонентов.
+Использование TypeScript (опционально, если кандидат знаком с ним).
+Применение CSS-in-JS или любого подхода для стилизации компонентов.
+Применение React Context или других механизмов для управления состоянием приложения.
+Обязательно использование API routes в Next.js.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ожидаемые результаты:
+1. Рабочее приложение с динамическими страницами товаров.
+2. Чистый, понятный и структурированный код.
+3. Документация, если необходимо, для объяснения архитектуры приложения.
+4. Описание принятых решений по производительности и безопасности
